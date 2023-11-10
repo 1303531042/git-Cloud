@@ -1,0 +1,10 @@
+# application listener
+org.springframework.context.ApplicationListener=\
+com.ruoyi.gateway.SpringStartingListener
+
+# Auto Configure
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.ruoyi.gateway.IotCoreConfiguration,\
+com.ruoyi.gateway.boot.autoconfigure.ClientAutoConfiguration,\
+com.ruoyi.gateway.boot.autoconfigure.ServerAutoConfiguration
+

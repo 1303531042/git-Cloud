@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="cloud-simulation" />
+        <module name="wumei-iot" />
+        <module name="wumei-system" />
+        <module name="iot-modbus" />
+        <module name="iot-boot-start" />
+        <module name="iot-server" />
+        <module name="wumei-admin" />
+        <module name="iot-mqtt" />
+        <module name="wumei-quartz" />
+        <module name="getway-bom" />
+        <module name="wumei-common" />
+        <module name="iot-core" />
+        <module name="wumei-generator" />
+        <module name="iot-client" />
+        <module name="wumei-framework" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="cloud-getway" target="1.8" />
+      <module name="cloud-simulation" target="1.8" />
+      <module name="getway-bom" target="1.5" />
+      <module name="iot-boot-start" target="1.8" />
+      <module name="iot-client" target="1.8" />
+      <module name="iot-core" target="1.8" />
+      <module name="iot-modbus" target="1.8" />
+      <module name="iot-mqtt" target="1.8" />
+      <module name="iot-server" target="1.8" />
+      <module name="wumei" target="1.8" />
+      <module name="wumei-admin" target="1.8" />
+      <module name="wumei-common" target="1.8" />
+      <module name="wumei-framework" target="1.8" />
+      <module name="wumei-generator" target="1.8" />
+      <module name="wumei-iot" target="1.8" />
+      <module name="wumei-quartz" target="1.8" />
+      <module name="wumei-system" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="cloud-simulation" options="-bootclasspath $USER_HOME$/Library/Java/JavaVirtualMachines/corretto-17.0.7/Contents/Home/lib/rt.jar:$USER_HOME$/Library/Java/JavaVirtualMachines/corretto-17.0.7/Contents/Home/lib/jce.jar" />
+      <module name="iot-boot-start" options="-bootclasspath $USER_HOME$/Library/Java/JavaVirtualMachines/corretto-17.0.7/Contents/Home/lib/rt.jar:$USER_HOME$/Library/Java/JavaVirtualMachines/corretto-17.0.7/Contents/Home/lib/jce.jar" />
+      <module name="iot-client" options="-bootclasspath $USER_HOME$/Library/Java/JavaVirtualMachines/corretto-17.0.7/Contents/Home/lib/rt.jar:$USER_HOME$/Library/Java/JavaVirtualMachines/corretto-17.0.7/Contents/Home/lib/jce.jar" />
+      <module name="iot-core" options="-bootclasspath $USER_HOME$/Library/Java/JavaVirtualMachines/corretto-17.0.7/Contents/Home/lib/rt.jar:$USER_HOME$/Library/Java/JavaVirtualMachines/corretto-17.0.7/Contents/Home/lib/jce.jar" />
+      <module name="iot-modbus" options="-bootclasspath $USER_HOME$/Library/Java/JavaVirtualMachines/corretto-17.0.7/Contents/Home/lib/rt.jar:$USER_HOME$/Library/Java/JavaVirtualMachines/corretto-17.0.7/Contents/Home/lib/jce.jar" />
+      <module name="iot-mqtt" options="-bootclasspath $USER_HOME$/Library/Java/JavaVirtualMachines/corretto-17.0.7/Contents/Home/lib/rt.jar:$USER_HOME$/Library/Java/JavaVirtualMachines/corretto-17.0.7/Contents/Home/lib/jce.jar" />
+      <module name="iot-server" options="-bootclasspath $USER_HOME$/Library/Java/JavaVirtualMachines/corretto-17.0.7/Contents/Home/lib/rt.jar:$USER_HOME$/Library/Java/JavaVirtualMachines/corretto-17.0.7/Contents/Home/lib/jce.jar" />
+      <module name="wumei" options="-bootclasspath $USER_HOME$/Library/Java/JavaVirtualMachines/corretto-17.0.7/Contents/Home/lib/rt.jar:$USER_HOME$/Library/Java/JavaVirtualMachines/corretto-17.0.7/Contents/Home/lib/jce.jar" />
+      <module name="wumei-admin" options="-bootclasspath $USER_HOME$/Library/Java/JavaVirtualMachines/corretto-17.0.7/Contents/Home/lib/rt.jar:$USER_HOME$/Library/Java/JavaVirtualMachines/corretto-17.0.7/Contents/Home/lib/jce.jar" />
+      <module name="wumei-common" options="-bootclasspath $USER_HOME$/Library/Java/JavaVirtualMachines/corretto-17.0.7/Contents/Home/lib/rt.jar:$USER_HOME$/Library/Java/JavaVirtualMachines/corretto-17.0.7/Contents/Home/lib/jce.jar" />
+      <module name="wumei-framework" options="-bootclasspath $USER_HOME$/Library/Java/JavaVirtualMachines/corretto-17.0.7/Contents/Home/lib/rt.jar:$USER_HOME$/Library/Java/JavaVirtualMachines/corretto-17.0.7/Contents/Home/lib/jce.jar" />
+      <module name="wumei-generator" options="-bootclasspath $USER_HOME$/Library/Java/JavaVirtualMachines/corretto-17.0.7/Contents/Home/lib/rt.jar:$USER_HOME$/Library/Java/JavaVirtualMachines/corretto-17.0.7/Contents/Home/lib/jce.jar" />
+      <module name="wumei-iot" options="-bootclasspath $USER_HOME$/Library/Java/JavaVirtualMachines/corretto-17.0.7/Contents/Home/lib/rt.jar:$USER_HOME$/Library/Java/JavaVirtualMachines/corretto-17.0.7/Contents/Home/lib/jce.jar" />
+      <module name="wumei-quartz" options="-bootclasspath $USER_HOME$/Library/Java/JavaVirtualMachines/corretto-17.0.7/Contents/Home/lib/rt.jar:$USER_HOME$/Library/Java/JavaVirtualMachines/corretto-17.0.7/Contents/Home/lib/jce.jar" />
+      <module name="wumei-system" options="-bootclasspath $USER_HOME$/Library/Java/JavaVirtualMachines/corretto-17.0.7/Contents/Home/lib/rt.jar:$USER_HOME$/Library/Java/JavaVirtualMachines/corretto-17.0.7/Contents/Home/lib/jce.jar" />
+    </option>
+  </component>
+</project>

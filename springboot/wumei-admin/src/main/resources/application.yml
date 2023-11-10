@@ -1,0 +1,280 @@
+# 项目相关配置
+ruoyi:
+  # 名称
+  name: ruoyi
+  # 版本
+  version: 3.8.0
+  # 版权年份: 2021
+  # 实例演示开关
+  demoEnabled: false
+  # 文件路径，以uploadPath结尾 示例（ Windows配置 D:/uploadPath，Linux配置 /uploadPath）
+  profile: /var/data/java/uploadPath
+  # 获取ip地址开关
+  addressEnabled: true
+  # 验证码类型 math 数组计算 char 字符验证
+  captchaType: math
+
+# 开发环境配置
+server:
+  # 服务器的HTTP端口，默认为8080
+  port: 8296
+  servlet:
+    # 应用的访问路径
+    context-path: /
+  tomcat:
+    # tomcat的URI编码
+    uri-encoding: UTF-8
+    # tomcat最大线程数，默认为200
+    max-threads: 800
+    # Tomcat启动初始化的线程数，默认值25
+    min-spare-threads: 30
+
+# 日志配置
+logging:
+  level:
+    com.ruoyi: warn
+    org.springframework: warn
+
+# Spring配置
+spring:
+  main:
+    allow-circular-references: true
+  # 资源信息
+  messages:
+    # 国际化资源文件路径
+    basename: i18n/messages
+  profiles:
+    active: druid
+  # 文件上传
+  servlet:
+    multipart:
+      # 单个文件大小
+      max-file-size:  10MB
+      # 设置总上传的文件大小
+      max-request-size:  20MB
+      enabled: true
+
+  task:
+    execution:
+      pool:
+        core-size: 10         # 最小连接数
+        max-size: 30          # 最大连接数
+        queue-capacity: 3000  # 最大容量
+
+
+
+  # redis 配置
+  redis:
+    # 地址
+    host: 192.168.10.152
+    # 端口，默认为6379
+    port: 6379
+    # 数据库索引
+    database: 0
+    # 密码
+    #    password: wumei-smart
+    # 连接超时时间
+    timeout: 10s
+    lettuce:
+      pool:
+        # 连接池中的最小空闲连接
+        min-idle: 0
+        # 连接池中的最大空闲连接
+        max-idle: 8
+        # 连接池的最大数据库连接数
+        max-active: 8
+        # #连接池最大阻塞等待时间（使用负值表示没有限制）
+        max-wait: -1ms
+
+
+
+
+
+# token配置
+token:
+  # 令牌自定义标识
+  header: token
+  # 令牌密钥
+  secret: abcdefghijklwumeismartrstuvwxyz
+  # 令牌有效期（默认30分钟）1440为一天
+  expireTime: 1440
+
+## MyBatis配置
+#mybatis:
+#  # 搜索指定包别名
+#  typeAliasesPackage: com.ruoyi.**.domain
+#  # 配置mapper的扫描，找到所有的mapper.xml映射文件
+#  mapperLocations: classpath*:mapper/**/*Mapper.xml
+#  # 加载全局的配置文件
+#  configLocation: classpath:mybatis/mybatis-config.xml
+
+# PageHelper分页插件
+pagehelper:
+  helperDialect: mysql
+  supportMethodsArguments: true
+  params: count=countSql
+
+# Swagger配置
+swagger:
+  # 是否开启swagger
+  enabled: false
+  # 请求前缀
+  pathMapping: /dev-api
+
+# 防止XSS攻击
+xss:
+  # 过滤开关
+  enabled: true
+  # 排除链接（多个用逗号分隔）
+  excludes: /system/notice
+  # 匹配链接
+  urlPatterns: /system/*,/monitor/*,/tool/*
+
+
+
+iot:
+  core:
+    level: debug
+
+mybatis-plus:
+  # 不支持多包, 如有需要可在注解配置 或 提升扫包等级
+  # 例如 com.**.**.mapper
+  mapperPackage: com.ruoyi.**.mapper
+  # 对应的 XML 文件位置
+  mapperLocations: classpath*:mapper/**/*Mapper.xml
+  # 实体扫描，多个package用逗号或者分号分隔
+  typeAliasesPackage: com.ruoyi.**.domain
+  # 启动时是否检查 MyBatis XML 文件的存在，默认不检查
+  checkConfigLocation: false
+  configuration:
+    default-lazy-loading-enabled: true
+    # 自动驼峰命名规则（camel case）映射
+    mapUnderscoreToCamelCase: true
+    # MyBatis 自动映射策略
+    # NONE：不启用 PARTIAL：只对非嵌套 resultMap 自动映射 FULL：对所有 resultMap 自动映射
+    autoMappingBehavior: PARTIAL
+    # MyBatis 自动映射时未知列或未知属性处理策
+    # NONE：不做处理 WARNING：打印相关警告 FAILING：抛出异常和详细信息
+    autoMappingUnknownColumnBehavior: NONE
+#    logImpl: org.apache.ibatis.logging.stdout.StdOutImpl
+    # 更详细的日志输出 会有性能损耗 org.apache.ibatis.logging.stdout.StdOutImpl
+    # 关闭日志记录 (可单纯使用 p6spy 分析) org.apache.ibatis.logging.nologging.NoLoggingImpl
+    # 默认日志输出 org.apache.ibatis.logging.slf4j.Slf4jImpl
+    # logImpl: org.apache.ibatis.logging.nologging.NoLoggingImpl
+  global-config:
+    # 是否打印 Logo banner
+    banner: false
+    dbConfig:
+      # 主键类型
+      # AUTO 自增 NONE 空 INPUT 用户输入 ASSIGN_ID 雪花 ASSIGN_UUID 唯一 UUID
+      idType: ASSIGN_ID
+      # 逻辑已删除值
+      logicDeleteValue: 2
+      # 逻辑未删除值
+      logicNotDeleteValue: 0
+      insertStrategy: NOT_NULL
+      updateStrategy: NOT_NULL
+      where-strategy: NOT_NULL
+#多租户配置
+tenant:
+  tenantIdColumn: tenant_id
+  ignoreTables: sys_;iot_category;iot_device_log;simulation_device;product_request;product_simulation;iot_device_auto_report_expression
+
+
+# redisson 配置
+redisson:
+
+  # redis key前缀
+  keyPrefix:
+  # 线程池数量
+  threads: 4
+  # Netty线程池数量
+  nettyThreads: 8
+  # 单节点配置
+  singleServerConfig:
+    # 客户端名称
+    clientName: ${spring.application.name}
+    # 最小空闲连接数
+    connectionMinimumIdleSize: 8
+    # 连接池大小
+    connectionPoolSize: 32
+    # 连接空闲超时，单位：毫秒
+    idleConnectionTimeout: 10000
+    # 命令等待超时，单位：毫秒
+    timeout: 3000
+    # 发布和订阅连接池大小
+    subscriptionConnectionPoolSize: 50
+
+sa-token:
+  # token名称 (同时也是cookie名称)
+  token-name: token
+  # token有效期，单位s 默认30天, -1代表永不过期
+  timeout: 1800
+  # token临时有效期 (指定时间内无操作就视为token过期) 单位: 秒
+  activity-timeout: -1
+  # 是否允许同一账号并发登录 (为true时允许一起登录, 为false时新登录挤掉旧登录)
+  is-concurrent: true
+  # 在多人登录同一账号时，是否共用一个token (为true时所有登录共用一个token, 为false时每次登录新建一个token)
+  is-share: false
+  # token风格
+  token-style: uuid
+  # 是否输出操作日志
+  is-log: false
+  is-print: off
+
+
+
+
+
+rocketmq:
+  name-server: 124.70.192.24:8144 # NameServer 地址
+  producer:
+    group: producer_group # 生产者组名
+  consumer:
+    pull-batch-size: 32 # 消费者每次拉取的消息数量
+
+#influxdb:
+#  url: http://192.168.10.152:8087
+#  token: qxGciRltiLU_g_iJPqBaXOyPSz3xmkLUE0JUukXqBkx8JUCSawXJXJsH50zABjlV-w-wO0ERRYQD45JToZkt_A==
+#  org: yn
+#  bucket: Cloud
+influxdb:
+  url: http://192.168.10.152:8088
+  token: mUh7y035CdP4P5HsIQ6fSb8-xw_BfEknHPRi0x45w8c9e0GX5bWJWCR6ksAR6SsmnnMnS9pnyYgapwe6k4ECng==
+  org: org
+  bucket: IotCloud
+#influxdb:
+#  url: http://192.168.10.152:8086
+#  token: UnHUO4jck4V7PpwLeUj2WHPgCT7vG6nEJ0xLFc44LUkZreI7Pjh-FBe7SnFYhDDpAVyLucv1EHWyh0cr_xePUA==
+#  org: yn
+#  bucket: Cloud
+
+mqtt:
+  client:
+    enabled: true               # 是否开启客户端，默认：true
+    ip: 124.70.192.24          # 连接的服务端 ip ，默认：127.0.0.1
+    port: 8173                   # 端口：默认：1883   运行环境：8173
+    name: Mica-Mqtt-Client      # 名称，默认：Mica-Mqtt-Client
+    clientId: 000014111115211111            # 客户端Id（非常重要，一般为设备 sn，不可重复）
+    user-name: mica1             # 认证的用户名
+    password: 1234561            # 认证的密码
+    timeout: 60                  # 超时时间，单位：秒，默认：5秒
+    reconnect: true             # 是否重连，默认：true
+    re-interval: 5000           # 重连时间，默认 5000 毫秒
+    version: mqtt_3_1_1         # mqtt 协议版本，可选 MQTT_3_1、mqtt_3_1_1、mqtt_5，默认：mqtt_3_1_1
+    read-buffer-size: 8KB       # 接收数据的 buffer size，默认：8k
+    max-bytes-in-message: 10MB  # 消息解析最大 bytes 长度，默认：10M
+    buffer-allocator: heap      # 堆内存和堆外内存，默认：堆内存
+    keep-alive-secs: 300         # keep-alive 时间，单位：秒
+    clean-session: true         # mqtt clean session，默认：true
+#    ssl:
+#      enabled: false            # 是否开启 ssl 认证，2.1.0 开始支持双向认证
+#      keystore-path:            # 可选参数：ssl 双向认证 keystore 目录，支持 classpath:/ 路径。
+#      keystore-pass:            # 可选参数：ssl 双向认证 keystore 密码
+#      truststore-path:          # 可选参数：ssl 双向认证 truststore 目录，支持 classpath:/ 路径。
+#      truststore-pass:          # 可选参数：ssl 双向认证 truststore 密码
+
+
+
+
+

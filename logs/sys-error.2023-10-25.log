@@ -1,0 +1,30 @@
+14:45:28.040 [main] ERROR c.a.d.f.s.StatFilter - [internalAfterStatementExecute,523] - slow sql 1388 millis. SELECT id, product_id, device_id, device_name, identity, expression FROM iot_device_auto_report_expression[]
+14:45:30.082 [main] ERROR c.a.d.f.s.StatFilter - [internalAfterStatementExecute,523] - slow sql 1845 millis. SELECT id, things_model, things_model_value, product_id, device_name, device_code, channel_code, status, network_ip, tenant_id, create_by, create_time, update_by, update_time FROM simulation_device[]
+14:45:30.649 [tio-timer-reconnect-1] ERROR o.t.client.TioClient - [run,549] - closeds:0, connections:0
+14:57:23.878 [tio-timer-reconnect-1] ERROR o.t.client.TioClient - [run,549] - closeds:1, connections:1
+14:57:23.906 [tio-client-reconn-1] ERROR o.t.c.ReconnRunnable - [runTask,249] - server:124.70.192.24:8173, client:192.168.10.190:54309, 第0次重连,重连耗时:21 ms
+14:57:54.125 [tio-timer-reconnect-1] ERROR o.t.client.TioClient - [run,549] - closeds:1, connections:1
+14:57:54.153 [tio-client-reconn-2] ERROR o.t.c.ReconnRunnable - [runTask,249] - server:124.70.192.24:8173, client:192.168.10.190:54315, 第0次重连,重连耗时:31 ms
+15:13:38.829 [tio-timer-reconnect-1] ERROR o.t.client.TioClient - [run,549] - closeds:0, connections:0
+15:13:48.501 [tio-timer-reconnect-1] ERROR o.t.client.TioClient - [run,549] - closeds:1, connections:1
+15:13:48.521 [tio-client-reconn-1] ERROR o.t.c.ReconnRunnable - [runTask,249] - server:124.70.192.24:8173, client:192.168.10.190:54625, 第0次重连,重连耗时:30 ms
+15:38:51.700 [tio-timer-reconnect-1] ERROR o.t.client.TioClient - [run,549] - closeds:0, connections:0
+15:42:02.251 [tio-timer-reconnect-1] ERROR o.t.client.TioClient - [run,549] - closeds:0, connections:0
+15:42:20.063 [tio-timer-reconnect-1] ERROR o.t.client.TioClient - [run,549] - closeds:0, connections:0
+15:42:30.249 [tio-timer-reconnect-1] ERROR o.t.client.TioClient - [run,549] - closeds:1, connections:1
+15:42:30.268 [tio-client-reconn-1] ERROR o.t.c.ReconnRunnable - [runTask,249] - server:124.70.192.24:8173, client:192.168.10.190:55573, 第0次重连,重连耗时:20 ms
+16:02:57.483 [main] ERROR c.a.d.f.s.StatFilter - [internalAfterStatementExecute,523] - slow sql 1261 millis. SELECT id, product_id, device_id, device_name, identity, expression FROM iot_device_auto_report_expression[]
+16:02:59.402 [main] ERROR c.a.d.f.s.StatFilter - [internalAfterStatementExecute,523] - slow sql 1773 millis. SELECT id, things_model, things_model_value, product_id, device_name, device_code, channel_code, status, network_ip, tenant_id, create_by, create_time, update_by, update_time FROM simulation_device[]
+16:02:59.852 [tio-timer-reconnect-1] ERROR o.t.client.TioClient - [run,549] - closeds:0, connections:0
+16:04:09.100 [tio-timer-reconnect-1] ERROR o.t.client.TioClient - [run,549] - closeds:0, connections:0
+16:04:52.906 [tio-timer-reconnect-1] ERROR o.t.client.TioClient - [run,549] - closeds:0, connections:0
+16:11:20.846 [tio-timer-reconnect-1] ERROR o.t.client.TioClient - [run,549] - closeds:0, connections:0
+16:11:30.147 [tio-timer-reconnect-1] ERROR o.t.client.TioClient - [run,549] - closeds:1, connections:1
+16:11:30.167 [tio-client-reconn-1] ERROR o.t.c.ReconnRunnable - [runTask,249] - server:124.70.192.24:8173, client:192.168.10.190:57260, 第0次重连,重连耗时:21 ms
+16:11:36.624 [tio-timer-reconnect-1] ERROR o.t.client.TioClient - [run,549] - closeds:1, connections:1
+16:11:36.645 [tio-client-reconn-2] ERROR o.t.c.ReconnRunnable - [runTask,249] - server:124.70.192.24:8173, client:192.168.10.190:57261, 第0次重连,重连耗时:22 ms
+16:12:34.451 [tio-timer-reconnect-1] ERROR o.t.client.TioClient - [run,549] - closeds:0, connections:0
+16:12:44.220 [tio-timer-reconnect-1] ERROR o.t.client.TioClient - [run,549] - closeds:1, connections:1
+16:12:44.240 [tio-client-reconn-1] ERROR o.t.c.ReconnRunnable - [runTask,249] - server:124.70.192.24:8173, client:192.168.10.190:57584, 第0次重连,重连耗时:20 ms
+16:25:00.010 [tio-timer-reconnect-1] ERROR o.t.client.TioClient - [run,549] - closeds:1, connections:1
+16:25:00.033 [tio-client-reconn-2] ERROR o.t.c.ReconnRunnable - [runTask,249] - server:124.70.192.24:8173, client:192.168.10.190:58586, 第0次重连,重连耗时:22 ms

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/springboot/cloud-getway/cloud-getway.iml" filepath="$PROJECT_DIR$/springboot/cloud-getway/cloud-getway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot/cloud-simulation/cloud-simulation.iml" filepath="$PROJECT_DIR$/springboot/cloud-simulation/cloud-simulation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot/cloud-getway/getway-bom/getway-bom.iml" filepath="$PROJECT_DIR$/springboot/cloud-getway/getway-bom/getway-bom.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/git-Cloud.iml" filepath="$PROJECT_DIR$/.idea/git-Cloud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot/cloud-getway/iot-boot-start/iot-boot-start.iml" filepath="$PROJECT_DIR$/springboot/cloud-getway/iot-boot-start/iot-boot-start.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot/cloud-getway/iot-client/iot-client.iml" filepath="$PROJECT_DIR$/springboot/cloud-getway/iot-client/iot-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot/cloud-getway/iot-core/iot-core.iml" filepath="$PROJECT_DIR$/springboot/cloud-getway/iot-core/iot-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot/cloud-getway/iot-modbus/iot-modbus.iml" filepath="$PROJECT_DIR$/springboot/cloud-getway/iot-modbus/iot-modbus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot/cloud-getway/iot-mqtt/iot-mqtt.iml" filepath="$PROJECT_DIR$/springboot/cloud-getway/iot-mqtt/iot-mqtt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot/cloud-getway/iot-server/iot-server.iml" filepath="$PROJECT_DIR$/springboot/cloud-getway/iot-server/iot-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot/wumei.iml" filepath="$PROJECT_DIR$/springboot/wumei.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot/wumei-admin/wumei-admin.iml" filepath="$PROJECT_DIR$/springboot/wumei-admin/wumei-admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot/wumei-common/wumei-common.iml" filepath="$PROJECT_DIR$/springboot/wumei-common/wumei-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot/wumei-framework/wumei-framework.iml" filepath="$PROJECT_DIR$/springboot/wumei-framework/wumei-framework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot/wumei-generator/wumei-generator.iml" filepath="$PROJECT_DIR$/springboot/wumei-generator/wumei-generator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot/wumei-iot/wumei-iot.iml" filepath="$PROJECT_DIR$/springboot/wumei-iot/wumei-iot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot/wumei-quartz/wumei-quartz.iml" filepath="$PROJECT_DIR$/springboot/wumei-quartz/wumei-quartz.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot/wumei-system/wumei-system.iml" filepath="$PROJECT_DIR$/springboot/wumei-system/wumei-system.iml" />
+    </modules>
+  </component>
+</project>

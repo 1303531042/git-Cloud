@@ -1,0 +1,837 @@
+10:45:37.834 [tio-timer-reconnect-1] ERROR o.t.client.TioClient - [run,549] - closeds:0, connections:0
+10:45:48.094 [tio-timer-reconnect-1] ERROR o.t.client.TioClient - [run,549] - closeds:1, connections:1
+10:45:48.124 [tio-client-reconn-1] ERROR o.t.c.ReconnRunnable - [runTask,249] - server:124.70.192.24:8173, client:192.168.10.96:53106, 第0次重连,重连耗时:31 ms
+10:50:37.014 [http-nio-8296-exec-3] ERROR c.r.f.w.e.GlobalExceptionHandler - [handleRuntimeException,109] - 请求地址'/energy/areastatistic',发生未知异常.
+com.ruoyi.common.exception.influx.WrapperNotFoundAnnotationException: productId属性com.influxdb.annotations.Column： 该注解中不存在
+	at com.ruoyi.common.influxdb.wrapper.AbstractFluxWrapper.lambda$scanFieldAnnotation$0(AbstractFluxWrapper.java:84)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at com.ruoyi.common.influxdb.wrapper.AbstractFluxWrapper.scanFieldAnnotation(AbstractFluxWrapper.java:74)
+	at com.ruoyi.common.influxdb.wrapper.AbstractFluxWrapper.analyzeMeasudirection(AbstractFluxWrapper.java:65)
+	at com.ruoyi.common.influxdb.wrapper.AbstractFluxWrapper.<init>(AbstractFluxWrapper.java:31)
+	at com.ruoyi.common.influxdb.wrapper.query.AbstractContainerQueryFluxWrapper.<init>(AbstractContainerQueryFluxWrapper.java:39)
+	at com.ruoyi.common.influxdb.wrapper.query.AbstractFunctionQueryFluxWrapper.<init>(AbstractFunctionQueryFluxWrapper.java:25)
+	at com.ruoyi.common.influxdb.wrapper.query.SimpleQueryWrapper.<init>(SimpleQueryWrapper.java:40)
+	at com.ruoyi.iot.influx.InfluxDbService.queryAllOfWindow(InfluxDbService.java:75)
+	at com.ruoyi.iot.energy.service.impl.StatisticsServiceImpl.lambda$deviceStatistic$7(StatisticsServiceImpl.java:217)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:566)
+	at com.ruoyi.iot.energy.service.impl.StatisticsServiceImpl.deviceStatistic(StatisticsServiceImpl.java:218)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.ReduceOps$ReduceTask.doLeaf(ReduceOps.java:747)
+	at java.util.stream.ReduceOps$ReduceTask.doLeaf(ReduceOps.java:721)
+	at java.util.stream.AbstractTask.compute(AbstractTask.java:327)
+	at java.util.concurrent.CountedCompleter.exec(CountedCompleter.java:731)
+	at java.util.concurrent.ForkJoinTask.doExec$$$capture(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java)
+	at java.util.concurrent.ForkJoinTask.doInvoke(ForkJoinTask.java:401)
+	at java.util.concurrent.ForkJoinTask.invoke(ForkJoinTask.java:734)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateParallel(ReduceOps.java:714)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:233)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:566)
+	at com.ruoyi.iot.energy.service.impl.StatisticsServiceImpl.areaStatistic(StatisticsServiceImpl.java:245)
+	at com.ruoyi.iot.energy.controller.EnergyController.areaStatistic(EnergyController.java:90)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:124)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+10:50:37.033 [http-nio-8296-exec-5] ERROR c.r.f.w.e.GlobalExceptionHandler - [handleRuntimeException,109] - 请求地址'/energy/areaproportion',发生未知异常.
+com.ruoyi.common.exception.influx.WrapperNotFoundAnnotationException: productId属性com.influxdb.annotations.Column： 该注解中不存在
+	at com.ruoyi.common.influxdb.wrapper.AbstractFluxWrapper.lambda$scanFieldAnnotation$0(AbstractFluxWrapper.java:84)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at com.ruoyi.common.influxdb.wrapper.AbstractFluxWrapper.scanFieldAnnotation(AbstractFluxWrapper.java:74)
+	at com.ruoyi.common.influxdb.wrapper.AbstractFluxWrapper.analyzeMeasudirection(AbstractFluxWrapper.java:65)
+	at com.ruoyi.common.influxdb.wrapper.AbstractFluxWrapper.<init>(AbstractFluxWrapper.java:31)
+	at com.ruoyi.common.influxdb.wrapper.query.AbstractContainerQueryFluxWrapper.<init>(AbstractContainerQueryFluxWrapper.java:39)
+	at com.ruoyi.common.influxdb.wrapper.query.AbstractFunctionQueryFluxWrapper.<init>(AbstractFunctionQueryFluxWrapper.java:25)
+	at com.ruoyi.common.influxdb.wrapper.query.SimpleQueryWrapper.<init>(SimpleQueryWrapper.java:40)
+	at com.ruoyi.iot.influx.InfluxDbService.queryAllOfWindow(InfluxDbService.java:75)
+	at com.ruoyi.iot.energy.service.impl.StatisticsServiceImpl.deviceStatisticIncreaseLast(StatisticsServiceImpl.java:40)
+	at com.ruoyi.iot.energy.controller.EnergyController.lambda$null$2(EnergyController.java:139)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:566)
+	at com.ruoyi.iot.energy.controller.EnergyController.lambda$areaProportion$3(EnergyController.java:145)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:566)
+	at com.ruoyi.iot.energy.controller.EnergyController.areaProportion(EnergyController.java:147)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:124)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+11:08:09.275 [Thread-24] ERROR o.t.u.t.p.TioCallerRunsPolicy - [rejectedExecution,212] - 
+11:08:20.880 [main] ERROR c.a.d.f.s.StatFilter - [internalAfterStatementExecute,523] - slow sql 1520 millis. SELECT id, product_id, device_id, device_name, identity, expression FROM iot_device_auto_report_expression[]
+11:08:23.513 [main] ERROR c.a.d.f.s.StatFilter - [internalAfterStatementExecute,523] - slow sql 2492 millis. SELECT id, things_model, things_model_value, product_id, device_name, device_code, channel_code, status, network_ip, tenant_id, create_by, create_time, update_by, update_time FROM simulation_device[]
+11:08:23.963 [tio-timer-reconnect-1] ERROR o.t.client.TioClient - [run,549] - closeds:0, connections:0
+11:09:09.512 [http-nio-8296-exec-5] ERROR c.r.f.w.e.GlobalExceptionHandler - [handleRuntimeException,109] - 请求地址'/energy/areastatistic',发生未知异常.
+com.ruoyi.common.exception.influx.WrapperNotFoundAnnotationException: productId属性com.influxdb.annotations.Column： 该注解中不存在
+	at com.ruoyi.common.influxdb.wrapper.AbstractFluxWrapper.lambda$scanFieldAnnotation$0(AbstractFluxWrapper.java:84)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at com.ruoyi.common.influxdb.wrapper.AbstractFluxWrapper.scanFieldAnnotation(AbstractFluxWrapper.java:74)
+	at com.ruoyi.common.influxdb.wrapper.AbstractFluxWrapper.analyzeMeasudirection(AbstractFluxWrapper.java:65)
+	at com.ruoyi.common.influxdb.wrapper.AbstractFluxWrapper.<init>(AbstractFluxWrapper.java:31)
+	at com.ruoyi.common.influxdb.wrapper.query.AbstractContainerQueryFluxWrapper.<init>(AbstractContainerQueryFluxWrapper.java:39)
+	at com.ruoyi.common.influxdb.wrapper.query.AbstractFunctionQueryFluxWrapper.<init>(AbstractFunctionQueryFluxWrapper.java:25)
+	at com.ruoyi.common.influxdb.wrapper.query.SimpleQueryWrapper.<init>(SimpleQueryWrapper.java:40)
+	at com.ruoyi.iot.influx.InfluxDbService.queryAllOfWindow(InfluxDbService.java:75)
+	at com.ruoyi.iot.energy.service.impl.StatisticsServiceImpl.lambda$deviceStatistic$7(StatisticsServiceImpl.java:217)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:566)
+	at com.ruoyi.iot.energy.service.impl.StatisticsServiceImpl.deviceStatistic(StatisticsServiceImpl.java:218)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.ReduceOps$ReduceTask.doLeaf(ReduceOps.java:747)
+	at java.util.stream.ReduceOps$ReduceTask.doLeaf(ReduceOps.java:721)
+	at java.util.stream.AbstractTask.compute(AbstractTask.java:327)
+	at java.util.concurrent.CountedCompleter.exec(CountedCompleter.java:731)
+	at java.util.concurrent.ForkJoinTask.doExec$$$capture(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:175)
+11:09:09.512 [http-nio-8296-exec-4] ERROR c.r.f.w.e.GlobalExceptionHandler - [handleRuntimeException,109] - 请求地址'/energy/areaproportion',发生未知异常.
+com.ruoyi.common.exception.influx.WrapperNotFoundAnnotationException: productId属性com.influxdb.annotations.Column： 该注解中不存在
+	at com.ruoyi.common.influxdb.wrapper.AbstractFluxWrapper.lambda$scanFieldAnnotation$0(AbstractFluxWrapper.java:84)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at com.ruoyi.common.influxdb.wrapper.AbstractFluxWrapper.scanFieldAnnotation(AbstractFluxWrapper.java:74)
+	at com.ruoyi.common.influxdb.wrapper.AbstractFluxWrapper.analyzeMeasudirection(AbstractFluxWrapper.java:65)
+	at com.ruoyi.common.influxdb.wrapper.AbstractFluxWrapper.<init>(AbstractFluxWrapper.java:31)
+	at com.ruoyi.common.influxdb.wrapper.query.AbstractContainerQueryFluxWrapper.<init>(AbstractContainerQueryFluxWrapper.java:39)
+	at com.ruoyi.common.influxdb.wrapper.query.AbstractFunctionQueryFluxWrapper.<init>(AbstractFunctionQueryFluxWrapper.java:25)
+	at com.ruoyi.common.influxdb.wrapper.query.SimpleQueryWrapper.<init>(SimpleQueryWrapper.java:40)
+	at com.ruoyi.iot.influx.InfluxDbService.queryAllOfWindow(InfluxDbService.java:75)
+	at com.ruoyi.iot.energy.service.impl.StatisticsServiceImpl.deviceStatisticIncreaseLast(StatisticsServiceImpl.java:40)
+	at com.ruoyi.iot.energy.controller.EnergyController.lambda$null$2(EnergyController.java:139)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:566)
+	at com.ruoyi.iot.energy.controller.EnergyController.lambda$areaProportion$3(EnergyController.java:145)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:566)
+	at com.ruoyi.iot.energy.controller.EnergyController.areaProportion(EnergyController.java:147)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:124)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+11:09:10.894 [Thread-29] ERROR o.t.u.t.p.TioCallerRunsPolicy - [rejectedExecution,212] - 
+11:09:24.219 [tio-timer-reconnect-1] ERROR o.t.client.TioClient - [run,549] - closeds:0, connections:0
+11:09:34.474 [tio-timer-reconnect-1] ERROR o.t.client.TioClient - [run,549] - closeds:1, connections:1
+11:09:34.508 [tio-client-reconn-1] ERROR o.t.c.ReconnRunnable - [runTask,249] - server:124.70.192.24:8173, client:192.168.10.96:55764, 第0次重连,重连耗时:31 ms
+11:44:54.787 [http-nio-8296-exec-4] ERROR c.r.f.w.e.GlobalExceptionHandler - [handleRuntimeException,109] - 请求地址'/energy/areastatistic',发生未知异常.
+org.mybatis.spring.MyBatisSystemException: nested exception is org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: com.baomidou.mybatisplus.core.exceptions.MybatisPlusException: Failed to process, Error SQL: SELECT
+            a.id area_id,
+            b.product_id,
+            b.device_id,
+            c.identifier dev_field
+        FROM
+            iot_area a
+                LEFT JOIN iot_area_device b ON a.id = b.area_id
+                LEFT JOIN iot_things_model c ON b.product_id = c.product_id
+         WHERE c.type =1
+             
+            
+            
+            
+                c.identifier = ? AND 
+        WHERE
+### Cause: com.baomidou.mybatisplus.core.exceptions.MybatisPlusException: Failed to process, Error SQL: SELECT
+            a.id area_id,
+            b.product_id,
+            b.device_id,
+            c.identifier dev_field
+        FROM
+            iot_area a
+                LEFT JOIN iot_area_device b ON a.id = b.area_id
+                LEFT JOIN iot_things_model c ON b.product_id = c.product_id
+         WHERE c.type =1
+             
+            
+            
+            
+                c.identifier = ? AND 
+        WHERE
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at java.util.concurrent.ForkJoinTask.getThrowableException(ForkJoinTask.java:593)
+	at java.util.concurrent.ForkJoinTask.reportException(ForkJoinTask.java:677)
+	at java.util.concurrent.ForkJoinTask.invoke(ForkJoinTask.java:735)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateParallel(ReduceOps.java:714)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:233)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:566)
+	at com.ruoyi.iot.energy.service.impl.StatisticsServiceImpl.areaStatistic(StatisticsServiceImpl.java:245)
+	at com.ruoyi.iot.energy.controller.EnergyController.areaStatistic(EnergyController.java:90)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:124)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: com.baomidou.mybatisplus.core.exceptions.MybatisPlusException: Failed to process, Error SQL: SELECT
+            a.id area_id,
+            b.product_id,
+            b.device_id,
+            c.identifier dev_field
+        FROM
+            iot_area a
+                LEFT JOIN iot_area_device b ON a.id = b.area_id
+                LEFT JOIN iot_things_model c ON b.product_id = c.product_id
+         WHERE c.type =1
+             
+            
+            
+            
+                c.identifier = ? AND 
+        WHERE
+### Cause: com.baomidou.mybatisplus.core.exceptions.MybatisPlusException: Failed to process, Error SQL: SELECT
+            a.id area_id,
+            b.product_id,
+            b.device_id,
+            c.identifier dev_field
+        FROM
+            iot_area a
+                LEFT JOIN iot_area_device b ON a.id = b.area_id
+                LEFT JOIN iot_things_model c ON b.product_id = c.product_id
+         WHERE c.type =1
+             
+            
+            
+            
+                c.identifier = ? AND 
+        WHERE
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:96)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:441)
+	at com.sun.proxy.$Proxy145.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:224)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.executeForMany(MybatisMapperMethod.java:166)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:77)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy$PlainMethodInvoker.invoke(MybatisMapperProxy.java:148)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at com.sun.proxy.$Proxy211.selectAreaDeviceInfluxBoList(Unknown Source)
+	at com.ruoyi.iot.energy.service.impl.AreaDeviceServiceImpl.queryAreaDeviceInfluxBoList(AreaDeviceServiceImpl.java:123)
+	at com.ruoyi.iot.influx.InfluxDbService.setWrapperSimpleCacheKeys(InfluxDbService.java:112)
+	at com.ruoyi.iot.influx.InfluxDbService.queryAllOfWindow(InfluxDbService.java:81)
+	at com.ruoyi.iot.energy.service.impl.StatisticsServiceImpl.lambda$deviceStatistic$7(StatisticsServiceImpl.java:217)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:566)
+	at com.ruoyi.iot.energy.service.impl.StatisticsServiceImpl.deviceStatistic(StatisticsServiceImpl.java:218)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.ReduceOps$ReduceTask.doLeaf(ReduceOps.java:747)
+	at java.util.stream.ReduceOps$ReduceTask.doLeaf(ReduceOps.java:721)
+	at java.util.stream.AbstractTask.compute(AbstractTask.java:327)
+	at java.util.concurrent.CountedCompleter.exec(CountedCompleter.java:731)
+	at java.util.concurrent.ForkJoinTask.doExec$$$capture(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:175)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: com.baomidou.mybatisplus.core.exceptions.MybatisPlusException: Failed to process, Error SQL: SELECT
+            a.id area_id,
+            b.product_id,
+            b.device_id,
+            c.identifier dev_field
+        FROM
+            iot_area a
+                LEFT JOIN iot_area_device b ON a.id = b.area_id
+                LEFT JOIN iot_things_model c ON b.product_id = c.product_id
+         WHERE c.type =1
+             
+            
+            
+            
+                c.identifier = ? AND 
+        WHERE
+### Cause: com.baomidou.mybatisplus.core.exceptions.MybatisPlusException: Failed to process, Error SQL: SELECT
+            a.id area_id,
+            b.product_id,
+            b.device_id,
+            c.identifier dev_field
+        FROM
+            iot_area a
+                LEFT JOIN iot_area_device b ON a.id = b.area_id
+                LEFT JOIN iot_things_model c ON b.product_id = c.product_id
+         WHERE c.type =1
+             
+            
+            
+            
+                c.identifier = ? AND 
+        WHERE
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:153)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:145)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at sun.reflect.GeneratedMethodAccessor75.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
+	... 32 common frames omitted
+Caused by: com.baomidou.mybatisplus.core.exceptions.MybatisPlusException: Failed to process, Error SQL: SELECT
+            a.id area_id,
+            b.product_id,
+            b.device_id,
+            c.identifier dev_field
+        FROM
+            iot_area a
+                LEFT JOIN iot_area_device b ON a.id = b.area_id
+                LEFT JOIN iot_things_model c ON b.product_id = c.product_id
+         WHERE c.type =1
+             
+            
+            
+            
+                c.identifier = ? AND 
+        WHERE
+	at com.baomidou.mybatisplus.core.toolkit.ExceptionUtils.mpe(ExceptionUtils.java:39)
+	at com.baomidou.mybatisplus.extension.parser.JsqlParserSupport.parserSingle(JsqlParserSupport.java:52)
+	at com.baomidou.mybatisplus.extension.plugins.inner.TenantLineInnerInterceptor.beforeQuery(TenantLineInnerInterceptor.java:68)
+	at com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor.intercept(MybatisPlusInterceptor.java:78)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:62)
+	at com.sun.proxy.$Proxy148.query(Unknown Source)
+	at com.github.pagehelper.PageInterceptor.intercept(PageInterceptor.java:132)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:62)
+	at com.sun.proxy.$Proxy148.query(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:151)
+	... 38 common frames omitted
+Caused by: net.sf.jsqlparser.parser.ParseException: Encountered unexpected token: "c" <S_IDENTIFIER>
+    at line 15, column 17.
+
+Was expecting one of:
+
+    "&"
+    "::"
+    ";"
+    "<<"
+    ">>"
+    "COLLATE"
+    "CONNECT"
+    "EMIT"
+    "GROUP"
+    "HAVING"
+    "START"
+    "["
+    "^"
+    "|"
+    <EOF>
+
+	at net.sf.jsqlparser.parser.CCJSqlParser.generateParseException(CCJSqlParser.java:31468)
+	at net.sf.jsqlparser.parser.CCJSqlParser.jj_consume_token(CCJSqlParser.java:31301)
+	at net.sf.jsqlparser.parser.CCJSqlParser.Statement(CCJSqlParser.java:163)
+	at net.sf.jsqlparser.parser.CCJSqlParserUtil.parseStatement(CCJSqlParserUtil.java:188)
+	at net.sf.jsqlparser.parser.CCJSqlParserUtil.parse(CCJSqlParserUtil.java:63)
+	at net.sf.jsqlparser.parser.CCJSqlParserUtil.parse(CCJSqlParserUtil.java:38)
+	at com.baomidou.mybatisplus.extension.parser.JsqlParserSupport.parserSingle(JsqlParserSupport.java:49)
+	... 46 common frames omitted
+11:44:54.807 [http-nio-8296-exec-5] ERROR c.r.f.w.e.GlobalExceptionHandler - [handleRuntimeException,109] - 请求地址'/energy/areaproportion',发生未知异常.
+org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: com.baomidou.mybatisplus.core.exceptions.MybatisPlusException: Failed to process, Error SQL: SELECT
+            a.id area_id,
+            b.product_id,
+            b.device_id,
+            c.identifier dev_field
+        FROM
+            iot_area a
+                LEFT JOIN iot_area_device b ON a.id = b.area_id
+                LEFT JOIN iot_things_model c ON b.product_id = c.product_id
+         WHERE c.type =1
+             
+            
+            
+            
+                c.identifier = ? AND 
+        WHERE
+### Cause: com.baomidou.mybatisplus.core.exceptions.MybatisPlusException: Failed to process, Error SQL: SELECT
+            a.id area_id,
+            b.product_id,
+            b.device_id,
+            c.identifier dev_field
+        FROM
+            iot_area a
+                LEFT JOIN iot_area_device b ON a.id = b.area_id
+                LEFT JOIN iot_things_model c ON b.product_id = c.product_id
+         WHERE c.type =1
+             
+            
+            
+            
+                c.identifier = ? AND 
+        WHERE
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:96)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:441)
+	at com.sun.proxy.$Proxy145.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:224)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.executeForMany(MybatisMapperMethod.java:166)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:77)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy$PlainMethodInvoker.invoke(MybatisMapperProxy.java:148)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at com.sun.proxy.$Proxy211.selectAreaDeviceInfluxBoList(Unknown Source)
+	at com.ruoyi.iot.energy.service.impl.AreaDeviceServiceImpl.queryAreaDeviceInfluxBoList(AreaDeviceServiceImpl.java:123)
+	at com.ruoyi.iot.influx.InfluxDbService.setWrapperSimpleCacheKeys(InfluxDbService.java:112)
+	at com.ruoyi.iot.influx.InfluxDbService.queryAllOfWindow(InfluxDbService.java:81)
+	at com.ruoyi.iot.energy.service.impl.StatisticsServiceImpl.deviceStatisticIncreaseLast(StatisticsServiceImpl.java:40)
+	at com.ruoyi.iot.energy.controller.EnergyController.lambda$null$2(EnergyController.java:139)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:566)
+	at com.ruoyi.iot.energy.controller.EnergyController.lambda$areaProportion$3(EnergyController.java:145)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:566)
+	at com.ruoyi.iot.energy.controller.EnergyController.areaProportion(EnergyController.java:147)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:124)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: com.baomidou.mybatisplus.core.exceptions.MybatisPlusException: Failed to process, Error SQL: SELECT
+            a.id area_id,
+            b.product_id,
+            b.device_id,
+            c.identifier dev_field
+        FROM
+            iot_area a
+                LEFT JOIN iot_area_device b ON a.id = b.area_id
+                LEFT JOIN iot_things_model c ON b.product_id = c.product_id
+         WHERE c.type =1
+             
+            
+            
+            
+                c.identifier = ? AND 
+        WHERE
+### Cause: com.baomidou.mybatisplus.core.exceptions.MybatisPlusException: Failed to process, Error SQL: SELECT
+            a.id area_id,
+            b.product_id,
+            b.device_id,
+            c.identifier dev_field
+        FROM
+            iot_area a
+                LEFT JOIN iot_area_device b ON a.id = b.area_id
+                LEFT JOIN iot_things_model c ON b.product_id = c.product_id
+         WHERE c.type =1
+             
+            
+            
+            
+                c.identifier = ? AND 
+        WHERE
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:153)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:145)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at sun.reflect.GeneratedMethodAccessor75.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
+	... 89 common frames omitted
+Caused by: com.baomidou.mybatisplus.core.exceptions.MybatisPlusException: Failed to process, Error SQL: SELECT
+            a.id area_id,
+            b.product_id,
+            b.device_id,
+            c.identifier dev_field
+        FROM
+            iot_area a
+                LEFT JOIN iot_area_device b ON a.id = b.area_id
+                LEFT JOIN iot_things_model c ON b.product_id = c.product_id
+         WHERE c.type =1
+             
+            
+            
+            
+                c.identifier = ? AND 
+        WHERE
+	at com.baomidou.mybatisplus.core.toolkit.ExceptionUtils.mpe(ExceptionUtils.java:39)
+	at com.baomidou.mybatisplus.extension.parser.JsqlParserSupport.parserSingle(JsqlParserSupport.java:52)
+	at com.baomidou.mybatisplus.extension.plugins.inner.TenantLineInnerInterceptor.beforeQuery(TenantLineInnerInterceptor.java:68)
+	at com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor.intercept(MybatisPlusInterceptor.java:78)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:62)
+	at com.sun.proxy.$Proxy148.query(Unknown Source)
+	at com.github.pagehelper.PageInterceptor.intercept(PageInterceptor.java:132)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:62)
+	at com.sun.proxy.$Proxy148.query(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:151)
+	... 95 common frames omitted
+Caused by: net.sf.jsqlparser.parser.ParseException: Encountered unexpected token: "c" <S_IDENTIFIER>
+    at line 15, column 17.
+
+Was expecting one of:
+
+    "&"
+    "::"
+    ";"
+    "<<"
+    ">>"
+    "COLLATE"
+    "CONNECT"
+    "EMIT"
+    "GROUP"
+    "HAVING"
+    "START"
+    "["
+    "^"
+    "|"
+    <EOF>
+
+	at net.sf.jsqlparser.parser.CCJSqlParser.generateParseException(CCJSqlParser.java:31468)
+	at net.sf.jsqlparser.parser.CCJSqlParser.jj_consume_token(CCJSqlParser.java:31301)
+	at net.sf.jsqlparser.parser.CCJSqlParser.Statement(CCJSqlParser.java:163)
+	at net.sf.jsqlparser.parser.CCJSqlParserUtil.parseStatement(CCJSqlParserUtil.java:188)
+	at net.sf.jsqlparser.parser.CCJSqlParserUtil.parse(CCJSqlParserUtil.java:63)
+	at net.sf.jsqlparser.parser.CCJSqlParserUtil.parse(CCJSqlParserUtil.java:38)
+	at com.baomidou.mybatisplus.extension.parser.JsqlParserSupport.parserSingle(JsqlParserSupport.java:49)
+	... 103 common frames omitted
+12:09:13.418 [tio-timer-reconnect-1] ERROR o.t.client.TioClient - [run,549] - closeds:1, connections:1
+12:09:13.438 [tio-client-reconn-2] ERROR o.t.c.ReconnRunnable - [runTask,249] - server:124.70.192.24:8173, client:192.168.10.96:59096, 第0次重连,重连耗时:22 ms
+12:45:42.044 [tio-timer-reconnect-1] ERROR o.t.client.TioClient - [run,549] - closeds:1, connections:1
+12:45:42.072 [tio-client-reconn-3] ERROR o.t.c.ReconnRunnable - [runTask,249] - server:124.70.192.24:8173, client:192.168.10.96:59767, 第0次重连,重连耗时:21 ms
+13:16:01.974 [tio-timer-reconnect-1] ERROR o.t.client.TioClient - [run,549] - closeds:1, connections:1
+13:16:01.996 [tio-client-reconn-4] ERROR o.t.c.ReconnRunnable - [runTask,249] - server:124.70.192.24:8173, client:192.168.10.96:60001, 第0次重连,重连耗时:32 ms
+13:38:52.829 [tio-timer-reconnect-1] ERROR o.t.client.TioClient - [run,549] - closeds:1, connections:1
+13:38:52.933 [tio-client-reconn-5] ERROR o.t.c.ReconnRunnable - [runTask,249] - server:124.70.192.24:8173, client:192.168.10.96:60471, 第0次重连,重连耗时:109 ms
+14:10:32.933 [tio-timer-reconnect-1] ERROR o.t.client.TioClient - [run,549] - closeds:1, connections:1
+14:10:32.967 [tio-client-reconn-6] ERROR o.t.c.ReconnRunnable - [runTask,249] - server:124.70.192.24:8173, client:192.168.10.96:62770, 第0次重连,重连耗时:28 ms
+16:33:33.106 [tio-timer-reconnect-1] ERROR o.t.client.TioClient - [run,549] - closeds:1, connections:1
+16:33:33.148 [tio-client-reconn-7] ERROR o.t.c.ReconnRunnable - [runTask,249] - server:124.70.192.24:8173, client:192.168.10.96:54496, 第0次重连,重连耗时:39 ms
+16:55:57.959 [tio-timer-reconnect-1] ERROR o.t.client.TioClient - [run,549] - closeds:1, connections:1
+16:55:57.994 [tio-client-reconn-8] ERROR o.t.c.ReconnRunnable - [runTask,249] - server:124.70.192.24:8173, client:192.168.10.96:56282, 第0次重连,重连耗时:31 ms
+19:22:49.044 [tio-timer-reconnect-1] ERROR o.t.client.TioClient - [run,549] - closeds:1, connections:1
+19:22:49.074 [tio-client-reconn-1] ERROR o.t.c.ReconnRunnable - [runTask,249] - server:124.70.192.24:8173, client:192.168.10.96:59516, 第0次重连,重连耗时:31 ms
+21:18:08.805 [tio-timer-reconnect-1] ERROR o.t.client.TioClient - [run,549] - closeds:1, connections:1
+21:18:08.831 [tio-client-reconn-2] ERROR o.t.c.ReconnRunnable - [runTask,249] - server:124.70.192.24:8173, client:192.168.10.96:59997, 第0次重连,重连耗时:30 ms
+22:35:04.108 [tio-timer-reconnect-1] ERROR o.t.client.TioClient - [run,549] - closeds:1, connections:1
+22:35:04.138 [tio-client-reconn-3] ERROR o.t.c.ReconnRunnable - [runTask,249] - server:124.70.192.24:8173, client:192.168.10.96:60512, 第0次重连,重连耗时:22 ms

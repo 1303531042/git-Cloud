@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.dtflys.forest:forest-core:1.5.19">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../maven-repository/com/dtflys/forest/forest-core/1.5.19/forest-core-1.5.19.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../maven-repository/com/dtflys/forest/forest-core/1.5.19/forest-core-1.5.19-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../maven-repository/com/dtflys/forest/forest-core/1.5.19/forest-core-1.5.19-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

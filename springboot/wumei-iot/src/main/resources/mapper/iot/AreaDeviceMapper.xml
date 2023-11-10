@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.iot.energy.mapper.AreaDeviceMapper">
+    <resultMap type="com.ruoyi.iot.energy.model.bo.AreaDeviceInfoBo" id="AreaDeviceInfoBo">
+        <result property="deviceId"    column="device_id"/>
+        <result property="productId"    column="product_id"/>
+        <result property="areaId"    column="area_id"/>
+        <result property="areaName"    column="area_name"/>
+        <result property="deviceName"    column="device_name"/>
+        <result property="serialNumber"    column="serial_number"/>
+        <result property="productName"    column="product_name"/>
+        <result property="status"    column="status"/>
+        <result property="thingsModelValue"    column="things_model_value"/>
+    </resultMap>
+    <select id="selectAreaDeviceInfoList" parameterType="com.ruoyi.iot.energy.model.bo.DeviceDashboardBo" resultMap="AreaDeviceInfoBo">
+        SELECT
+            c.device_id,
+            c.device_name,
+            c.product_id,
+            c.product_name,
+            a.area_id,
+            b.area_name,
+            c.serial_number,
+            c.`status`,
+            c.things_model_value
+        FROM
+            iot_area_device a
+                LEFT JOIN iot_area b ON a.area_id = b.id
+                LEFT JOIN iot_device c ON a.device_id = c.device_id
+                ${ew.customSqlSegment}
+        ORDER BY a.area_id
+
+<!--        <where>-->
+<!--            <if test="areaIds != null and !areaIds.isEmpty()">-->
+<!--                area_id IN-->
+<!--                <foreach collection="areaIds" item="areaId" separator="," open="(" close=")">-->
+<!--                    #{areaId}-->
+<!--                </foreach>-->
+<!--                AND-->
+<!--            </if>-->
+
+<!--            <if test="productId != null">-->
+<!--                product_id = #{productId} AND-->
+<!--            </if>-->
+
+<!--            <if test="status != null">-->
+<!--                status = #{status} AND-->
+<!--            </if>-->
+
+<!--            <if test="serialNumber != null and serialNumber != ''">-->
+<!--                serial_number = #{serialNumber} AND-->
+<!--            </if>-->
+<!--        </where>-->
+
+    </select>
+    <select id="selectAreaDeviceOnlineTotal" resultType="java.lang.Integer">
+        SELECT
+            COUNT(*)
+        FROM
+            iot_area_device a
+                LEFT JOIN iot_device b ON a.device_id = b.device_id
+        <where>
+            <if test="areaIds != null and !areaIds.isEmpty()">
+                    area_id IN
+                <foreach collection="areaIds" item="areaId" separator="," open="(" close=")">
+                    #{areaId}
+                </foreach>
+                     AND
+            </if>
+            b.`status` = 3
+        </where>
+    </select>
+    <select id="selectAreaDeviceOfflineTotal" resultType="java.lang.Integer">
+        SELECT
+        COUNT(*)
+        FROM
+        iot_area_device a
+        LEFT JOIN iot_device b ON a.device_id = b.device_id
+        <where>
+            <if test="areaIds != null and !areaIds.isEmpty()">
+                area_id IN
+                <foreach collection="areaIds" item="areaId" separator="," open="(" close=")">
+                    #{areaId}
+                </foreach>
+                AND
+            </if>
+            b.`status` = 2
+        </where>
+    </select>
+    <select id="selectAreaDeviceDetailedInfoList"
+            resultType="com.ruoyi.iot.energy.model.bo.AreaDeviceDetailedInfoBo">
+        SELECT
+            c.device_id,
+            c.device_name,
+            c.product_id,
+            c.product_name,
+            a.area_id,
+            b.area_name,
+            c.serial_number,
+            c.`status`,
+            c.things_model_value,
+            c.longitude,
+            c.latitude,
+            c.create_time
+        FROM
+            iot_area_device a
+                LEFT JOIN iot_area b ON a.area_id = b.id
+                LEFT JOIN iot_device c ON a.device_id = c.device_id
+            ${ ew.customSqlSegment}
+        ORDER BY a.area_id
+    </select>
+    <select id="selectAreaDeviceInfluxBoList"  parameterType="com.ruoyi.iot.influx.AreaDeviceInfluxBo" resultType="com.ruoyi.iot.influx.AreaDeviceInfluxBo">
+        SELECT
+            a.id area_id,
+            b.product_id,
+            b.device_id,
+            c.identifier dev_field
+        FROM
+            iot_area a
+                LEFT JOIN iot_area_device b ON a.id = b.area_id
+                LEFT JOIN iot_things_model c ON b.product_id = c.product_id
+        <where>
+             <if test="areaId != null">
+                a.area_id = #{areaId} AND
+            </if>
+            <if test="productId != null">
+                b.product_id = #{productId} AND
+            </if>
+            <if test="deviceID != null">
+                b.device_id = #{deviceID} AND
+            </if>
+            <if test="devField != null">
+                c.identifier = #{devField} AND
+            </if>
+            c.type =1
+        </where>
+    </select>
+    <select id="selectAreaDeviceAndEnergyAndAreaBoList" parameterType="com.ruoyi.iot.energy.model.bo.AreaEnergyBo"
+            resultType="com.ruoyi.iot.energy.model.bo.AreaDeviceAndEnergyAndAreaBo">
+        SELECT DISTINCT
+            a.area_id,
+            a.product_id,
+            b.identity
+        FROM
+            iot_area_device a
+                LEFT JOIN iot_energy_product b ON a.product_id = b.product_id
+        <where>
+            b.energy_type = #{energyType} AND
+            a.area_id IN
+            <foreach collection="areaIdList" item="areaId" separator="," open="(" close=")">
+                #{areaId}
+            </foreach>
+        </where>
+    </select>
+</mapper>

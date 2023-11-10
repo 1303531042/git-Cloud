@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.iot.energy.mapper.EnergyProductMapper">
+
+    <select id="selectEnergyProductBoList" parameterType='com.ruoyi.iot.energy.model.bo.SelectEnergyProductBo' resultType="com.ruoyi.iot.energy.model.bo.EnergyProductBo">
+        SELECT
+            a.energy_type,
+            a.product_id,
+            a.identity,
+            b.device_id,
+            c.id area_id,
+            c.area_name
+        FROM
+            iot_energy_product a
+                LEFT JOIN iot_area_device b ON a.product_id = b.product_id
+                LEFT JOIN iot_area c ON b.area_id = c.id
+        <where>
+            a.energy_type = #{energyType} AND c.id IN
+            <foreach collection="areaList" item="areaId" separator="," open="(" close=")">
+                #{areaId}
+            </foreach>
+            <if test="productId != null">
+                AND a.product_id = #{productId}
+            </if>
+            <if test="tenantId != null">
+                AND a.tenant_id = #{tenantId}
+            </if>
+
+        </where>
+
+    </select>
+
+</mapper>
